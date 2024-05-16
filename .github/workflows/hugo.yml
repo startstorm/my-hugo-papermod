@@ -52,7 +52,7 @@ jobs:
       - name: toPage
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: github.com.startstorm.io
           publish_dir: ./public
           keep_files: true # remove existing files
