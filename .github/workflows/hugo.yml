@@ -45,7 +45,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: startstorm/github.com.startstorm.io
+          external_repository: startstorm/startstorm.github.io
           publish_dir: ./public
           keep_files: true # remove existing files
           publish_branch: main  # deploying branch
