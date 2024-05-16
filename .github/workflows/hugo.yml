@@ -39,21 +39,19 @@ jobs:
           submodules: recursive
       - name: Build with Hugo
         run: hugo #--minify  --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
 
    # Deployment job
   deploy:
-    runs-on: ubuntu-latest
-    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
     steps:
-      - name: Deploy
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }} # 这里的 ACTIONS_DEPLOY_KEY 则是上面设置 Private Key的变量名
-          external_repository: startstorm/startstorm.github.io # Pages 远程仓库 
-          publish_dir: "./public/"
-          keep_files: true # remove existing files
-          publish_branch: main  # deploying branch
-          commit_message: ${{ github.event.head_commit.message }}
