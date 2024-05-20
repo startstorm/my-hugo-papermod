@@ -48,5 +48,5 @@ jobs:
         with:
           deploy_key: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: startstorm/startstorm.github.io
-          publish_branch: main  # default: gh-pages
+          publish_branch: master  # default: gh-pages
           publish_dir: ./public
