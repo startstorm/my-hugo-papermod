@@ -49,7 +49,7 @@ hugo new hello-world.md
 就可以在content文件夹下新建一个hello-world的markdown文件。
 如果我们content文件夹下有其他文件夹，比如路径为`content/post/blog`，想把文章新建到该文件夹下，使用
 ``` shell
-hugo new post/blog/hello-world.md
+hugo new posts/blog/hello-world.md
 ```
 
 # hugo端口号修改
