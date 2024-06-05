@@ -20,6 +20,8 @@ showbreadcrumbs: false
 
 {{< friend name="mohuishou's Blog" url="https://lailin.xyz" logo="" word="mohuishou的博客" >}}
 
+{{< friend name="倪朋飞的个人网站" url="https://feisky.xyz/" logo="https://www.gravatar.com/avatar/f86d2faa0f91793a2163d226d82a7620?s=240&d=mp" word="倪朋飞的个人网站" >}}
+
 </div>
 
 <br/>
